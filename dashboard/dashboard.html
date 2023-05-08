@@ -1,0 +1,35 @@
+<body>
+	<h1>Welcome to Your Dashboard</h1>
+	<p>Here are the latest currency exchange rates:</p>
+	<!--Display currency exchange rates-->
+	<form>
+		<label for="source">Source country:</label>
+		<input type="text" id="source" name="source">
+		<label for="destination">Destination country:</label>
+		<input type="text" id="destination" name="destination">
+		<button type="submit">Search</button>
+	</form>
+	<!--Display search results-->
+	<p>Your favorite currency exchange rates:</p>
+	<!--Display favorite currency exchange rates-->
+	<p>Here are your details:</p>
+	<!--Display user details and uploaded file-->
+	<form>
+		<label for="first-name">First Name:</label>
+		<input type="text" id="first-name" name="first-name">
+		<label for="last-name">Last Name:</label>
+		<input type="text" id="last-name" name="last-name">
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email">
+		<label for="address">Address:</label>
+		<input type="text" id="address" name="address">
+		<label for="phone">Phone:</label>
+		<input type="tel" id="phone" name="phone">
+		<label for="file">ID Proof:</label>
+		<input type="file" id="file" name="file">
+		<button type="submit">Update</button>
+	</form>
+	<script type="text/javascript" src="register page/dashboard.js"></script>
+	<?php include("register page/dashboard.php"); ?>
+</body>
+</html>
