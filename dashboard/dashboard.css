@@ -1,0 +1,101 @@
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* Form styles */
+form {
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input[type="text"], form input[type="password"], form select {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Favorite styles */
+.favorite {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.favorite input[type="checkbox"] {
+  display: none;
+}
+
+.favorite label {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.favorite label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+}
+
+.favorite label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 9px;
+  height: 9px;
+  background-color: #333;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.favorite input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
