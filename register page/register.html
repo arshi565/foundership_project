@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register - Online Money Transfer Portal</title>
+    <style>
+      /* Add some styles to make the page look good */
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .error-message {
+        color: red;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <form id="register-form" enctype="multipart/form-data">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" required>
+      <span class="error-message" id="first-name-error"></span><br><br>
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" required>
+      <span class="error-message" id="last-name-error"></span><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <span class="error-message" id="email-error"></span><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <span class="error-message" id="password-error"></span><br><br>
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address"><br><br>
+      <label for="phone-number">Phone Number:</label>
+      <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{10}"><br><br>
+      <label for="id-proof">ID Proof (like a passport):</label>
+      <input type="file" id="id-proof" name="id-proof" accept="image/*,.pdf" required>
+      <span class="error-message" id="id-proof-error"></span><br><br>
+      <input type="submit" value="Register">
+    </form>
+
+    <script>
+      const form = document.getElementById('register-form');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Client-side validation
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const idProof = document.getElementById('id-proof').files[0];
+       
+
