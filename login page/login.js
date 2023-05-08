@@ -4,6 +4,18 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
 
+const mysql = require('mysql2/promise');
+// Create a connection pool
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: 'password',
+  database: 'login',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+});
+
 // Set up express app
 const app = express();
 
